@@ -1,0 +1,15 @@
+img{
+    background-position: center;
+    padding: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1{
+    position: center;
+    font-size: 34px;    
+    color:aqua;
+}
+body{
+    background-color: blue;
+}

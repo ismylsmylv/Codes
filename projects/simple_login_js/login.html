@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <script src="./script.js"></script>
+    <style>
+        body{
+            background-image: linear-gradient(to bottom left, rgb(4, 28, 247) , rgb(255, 255, 255));
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .slice{
+            border: 5px solid rgb(255, 255, 255);
+            border-style: solid;
+            max-width: 40%;
+            border-width: thick;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+        img{
+            max-width: 60%;
+            max-height: 60%;
+        }
+        .login_text1{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .login_text2{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 5px;
+        }
+        .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .button {
+        cursor: pointer;
+        background-color: rgb(4, 28, 247);
+        color: white;
+        background-color: rgb(4, 28, 247);
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        font-size: 16px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-top: 10px;
+        margin-top: 12px;
+        margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body><div class="slice">
+    <div class="logo"><img src="./random.png" alt="logo"></div>
+    <div class="login_text1"><p>Welcome to the Ceres</p></div>
+    <div class="login_text2"><p>Please enter your username and password to continue:</p></div>
+<form onsubmit="login()">
+    <div class="name_input"><input type="text" placeholder="username" id="username" name="username" style="background-color: #ffffff; border: 1px solid #c8c8c8; padding: 10px; align-items: center; margin-top: 15px;"></div>
+    <div class="pass_input"><input type="password" placeholder="password" id="password" name="password" style="background-color: #ffffff; border: 1px solid #c8c8c8; padding: 10px; align-items: center; margin-top: 15px;"></div>
+    <div class="submit"><button class="button" id="submit-btn" >Log in</button></div>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guess the Color Game</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    #colorDisplay {
+      font-size: 24px;
+      padding: 20px;
+    }
+    .colorButton {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Guess the Color</h1>
+  <div id="colorDisplay">Guess the Color!</div>
+  <div id="colorButtons">
+    <!-- Add color buttons here -->
+  </div>
+
+  <script>
+    const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange'];
+    const colorDisplay = document.getElementById('colorDisplay');
+    const colorButtons = document.getElementById('colorButtons');
+
+    function getRandomColor() {
+      const randomIndex = Math.floor(Math.random() * colors.length);
+      return colors[randomIndex];
+    }
+
+    function setColorDisplay(color) {
+      colorDisplay.textContent = color.toUpperCase();
+    }
+
+    function createColorButtons() {
+      for (const color of colors) {
+        const button = document.createElement('div');
+        button.className = 'colorButton';
+        button.style.backgroundColor = color;
+        button.addEventListener('click', () => checkGuess(color));
+        colorButtons.appendChild(button);
+      }
+    }
+
+    function checkGuess(guess) {
+      const targetColor = colorDisplay.textContent.toLowerCase();
+      if (guess === targetColor) {
+        alert('Congratulations! You guessed the correct color!');
+        resetGame();
+      } else {
+        alert('Incorrect guess. Try again!');
+      }
+    }
+
+    function resetGame() {
+      const newColor = getRandomColor();
+      setColorDisplay(newColor);
+    }
+
+    // Initialize the game
+    createColorButtons();
+    resetGame();
+  </script>
+</body>
+</html>
